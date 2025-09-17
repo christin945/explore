@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Booking Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="booking.html" class="nav-item active"><i class="fas fa-calendar-check"></i><span>Booking</span></a>
+    </nav>
+
+    <section class="section-container booking-section">
+        <h2>Your Booking Details</h2>
+        <div id="booking-data" class="booking-summary"></div>
+        <button id="show-guide" class="btn-primary" style="margin-top:20px;">Show Guide Info</button>
+        <div id="guide-info" class="guide-card" style="display:none;margin-top:15px;">
+            <p><strong>Guide Name:</strong> Ananya Rao</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 GT Holidays | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Load booking
+        const booking = JSON.parse(localStorage.getItem('gt_booking'));
+        const container = document.getElementById('booking-data');
+        if (booking) {
+            container.innerHTML = `
+        <p><strong>Name:</strong> ${booking.fullName}</p>
+        <p><strong>Email:</strong> ${booking.email}</p>
+        <p><strong>Phone:</strong> ${booking.phone}</p>
+        <p><strong>People:</strong> ${booking.people}</p>
+        <p><strong>Tour:</strong> ${booking.tour}</p>
+        <p><strong>Start Date:</strong> ${booking.startDate}</p>
+        <p><strong>Notes:</strong> ${booking.message || 'None'}</p>
+      `;
+        } else {
+            container.innerHTML = '<p>No booking found. Go back and book a tour.</p>';
+            document.getElementById('show-guide').style.display = 'none';
+        }
+
+        document.getElementById('show-guide').onclick = () => {
+            document.getElementById('guide-info').style.display = 'block';
+        };
+    </script>
+</body>
+
+</html>

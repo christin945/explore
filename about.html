@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chris Holidays – About Us</title>
+
+    <!-- Google Font & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Basic Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(180deg, #fdfdfd 0%, #f9f9f9 100%);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        
+        a:hover {
+            color: #ff6f61;
+            text-shadow: 0 0 6px rgba(255, 111, 97, 0.5);
+        }
+        /* Top Navigation */
+        
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #111;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.7rem 0;
+            z-index: 1000;
+        }
+        
+        .top-nav .nav-item {
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+        
+        .top-nav .nav-item i {
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+        }
+        
+        .top-nav .nav-item:hover,
+        .top-nav .nav-item.active {
+            color: #ffb703;
+        }
+        
+        .section-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+        /* About Section */
+        
+        .about-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+            background: #fafafa;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .about-section img {
+            width: 50%;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text {
+            width: 50%;
+        }
+        
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        /* Team Section */
+        
+        .team-section {
+            margin-top: 60px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 111, 97, 0.3);
+        }
+        
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        
+        .team-card h4 {
+            color: #ff6f61;
+            margin-bottom: 5px;
+        }
+        
+        .team-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+        /* Footer */
+        
+        footer {
+            background: #222;
+            color: #ddd;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+            .about-section img,
+            .about-text {
+                width: 100%;
+            }
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav" role="navigation" aria-label="Primary">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="explore.html" class="nav-item"><i class="fas fa-map-marked-alt"></i><span>Explore</span></a>
+        <a href="about.html" class="nav-item active"><i class="fas fa-users"></i><span>About</span></a>
+        <a href="booking.html" class="nav-item"><i class="fas fa-calendar-alt"></i><span>Booking</span></a>
+        <a href="contact.html" class="nav-item"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
+    </nav>
+
+    <!-- About Section -->
+    <section class="section-container about-section">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dHJhdmVsJTIwaW5kaWF8fDB8fHx8MTY5NTE0MzQ0Nw&ixlib=rb-4.0.3&q=80&w=600" alt="Travel Team">
+        <div class="about-text">
+            <h3>ABOUT INCREDIBLE INDIA</h3>
+            <p>GT Holidays is dedicated to offering unforgettable travel experiences across India. From historical landmarks to serene beaches, we craft tours that suit every traveler’s dream.</p>
+            <p>Our expert guides, custom itineraries, and personalized support ensure a safe, enjoyable, and enriching journey for everyone.
+            </p>
+            <p>We believe in connecting travelers with local culture, traditions, and hidden gems to create lifelong memories.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-container team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
+                <h4>Chris Johnson</h4>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member">
+                <h4>Priya Sharma</h4>
+                <p>Tour Manager</p>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Team Member">
+                <h4>Ravi Kumar</h4>
+                <p>Travel Guide</p>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member">
+                <h4>Anita Verma</h4>
+                <p>Customer Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 chris Holidays | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

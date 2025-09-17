@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GT Holidays - Contact Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="css/style.css" />
+<style>
+  /* Make inputs and textarea full width */
+  .contact-section form input[type="text"],
+  .contact-section form input[type="email"],
+  .contact-section form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+  <a href="explore.html" class="nav-item"><i class="fas fa-compass"></i><span>Explore</span></a>
+  <a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i><span>About</span></a>
+  <a href="booking.html" class="nav-item"><i class="fas fa-calendar-check"></i><span>Booking</span></a>
+  <a href="contact.html" class="nav-item active"><i class="fas fa-envelope"></i><span>Contact</span></a>
+</nav>
+
+<section class="section-container contact-section">
+  <h2>Contact Us</h2>
+  <p>If you have questions or need assistance, feel free to reach out!</p>
+  <div class="contact-info">
+    <div><i class="fas fa-phone"></i> +91 98765 43210</div>
+    <div><i class="fas fa-envelope"></i> info@gtholiday.com</div>
+    <div><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Mumbai, India</div>
+  </div>
+
+  <form action="#" method="post" aria-label="Contact form">
+    <label for="contact-name">Name</label>
+    <input type="text" id="contact-name" name="contact-name" required />
+
+    <label for="contact-email">Email</label>
+    <input type="email" id="contact-email" name="contact-email" required />
+
+    <label for="contact-message">Message</label>
+    <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 GT Holidays | All Rights Reserved</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

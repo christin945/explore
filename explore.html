@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wanderlust India – Explore</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <nav class="top-nav" role="navigation" aria-label="Primary">
+        <a href="index.html" class="nav-item active" aria-current="page">
+            <i class="fas fa-home"></i><span>Home</span>
+        </a>
+        <a href="explore.html" class="nav-item"><i class="fas fa-map-marked-alt"></i><span>Explore</span></a>
+        <a href="about.html" class="nav-item"><i class="fas fa-users"></i><span>About</span></a>
+        <a href="booking.html" class="nav-item"><i class="fas fa-calendar-alt"></i><span>Booking</span></a>
+        <a href="contact.html" class="nav-item"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
+    </nav>
+
+
+
+    <!-- ===== Explore Destinations ===== -->
+    <section class="section-container featured-tours-section" aria-label="Explore Destinations">
+        <h2>Explore Popular Destinations</h2>
+
+        <!-- Filter + Search -->
+        <div class="filter-bar">
+            <label for="dest-filter">Filter by Region:</label>
+            <select id="dest-filter">
+        <option value="all" selected>All</option>
+        <option value="north">North India</option>
+        <option value="south">South India</option>
+        <option value="east">East India</option>
+        <option value="west">West India</option>
+      </select>
+            <input type="search" id="dest-search" placeholder="Search destination…" aria-label="Search destinations by name">
+        </div>
+
+        <!-- Destination Cards -->
+        <div id="dest-cards" class="tour-cards">
+            <article class="tour-card" data-region="north" data-title="ladakh">
+                <img src="https://images.unsplash.com/photo-1509644851169-2acc08aa25b1?auto=format&fit=crop&w=600&q=60" alt="Mountains in Ladakh">
+                <h3>Ladakh Adventure</h3>
+                <p>Explore the rugged landscapes and monasteries of Ladakh, a high-altitude desert.</p>
+                <p class="price">From ₹20,000</p>
+                <a href="booking.html" class="btn-secondary">Book Now</a>
+            </article>
+
+            <article class="tour-card" data-region="south" data-title="ooty">
+                <img src="https://images.unsplash.com/photo-1593872104899-42f4d19dbf17?auto=format&fit=crop&w=600&q=60" alt="Tea plantations in Ooty">
+                <h3>Ooty & Nilgiris</h3>
+                <p>Discover lush tea plantations and serene hills of the Nilgiri mountains.</p>
+                <p class="price">From ₹9,500</p>
+                <a href="booking.html" class="btn-secondary">Book Now</a>
+            </article>
+
+            <article class="tour-card" data-region="east" data-title="darjeeling">
+                <img src="https://images.unsplash.com/photo-1589367920022-9a16879dd68d?auto=format&fit=crop&w=600&q=60" alt="Darjeeling hills">
+                <h3>Darjeeling Hills</h3>
+                <p>Experience tea estates, toy train rides, and majestic views of Kanchenjunga.</p>
+                <p class="price">From ₹11,000</p>
+                <a href="booking.html" class="btn-secondary">Book Now</a>
+            </article>
+
+            <article class="tour-card" data-region="west" data-title="goa">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=60" alt="Goa beach sunset">
+                <h3>Goa Beaches</h3>
+                <p>Relax on golden beaches, enjoy vibrant nightlife, and savor Goan cuisine.</p>
+                <p class="price">From ₹8,000</p>
+                <a href="booking.html" class="btn-secondary">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Taj Mahal & Agra Tour">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Taj Mahal" />
+                <h3>Taj Mahal & Agra</h3>
+                <p>Experience the iconic symbol of love and the historic city of Agra.</p>
+                <p class="price">Starting at ₹15,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Taj Mahal & Agra Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Leh Ladakh Adventure">
+                <img src="https://images.unsplash.com/photo-1531219432768-3e2536e8d1b8?auto=format&fit=crop&w=800&q=80" alt="Leh Ladakh" />
+                <h3>Leh Ladakh Adventure</h3>
+                <p>Explore the breathtaking mountains and lakes of Ladakh.</p>
+                <p class="price">Starting at ₹30,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Leh Ladakh Adventure">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Shimla & Manali Tour">
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" alt="Shimla" />
+                <h3>Shimla & Manali</h3>
+                <p>Enjoy hill station vibes with beautiful mountain views.</p>
+                <p class="price">Starting at ₹18,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Shimla & Manali Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Golden Temple Amritsar">
+                <img src="https://images.unsplash.com/photo-1506801310323-534be5e7ddc5?auto=format&fit=crop&w=800&q=80" alt="Golden Temple" />
+                <h3>Golden Temple Amritsar</h3>
+                <p>Visit the spiritual Sikh shrine and historic sites of Amritsar.</p>
+                <p class="price">Starting at ₹12,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Golden Temple Amritsar Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Rishikesh Yoga Retreat">
+                <img src="https://images.unsplash.com/photo-1519817650390-64a93db51143?auto=format&fit=crop&w=800&q=80" alt="Rishikesh" />
+                <h3>Rishikesh Yoga Retreat</h3>
+                <p>Relax with yoga and meditation by the Ganges River.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Rishikesh Yoga Retreat">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Jaipur Pink City Tour">
+                <img src="https://images.unsplash.com/photo-1535930749574-1399327ce78f?auto=format&fit=crop&w=800&q=80" alt="Jaipur" />
+                <h3>Jaipur Pink City</h3>
+                <p>Explore forts, palaces and vibrant markets of Rajasthan’s capital.</p>
+                <p class="price">Starting at ₹20,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Jaipur Pink City Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Haridwar Spiritual Tour">
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="Haridwar" />
+                <h3>Haridwar Spiritual Tour</h3>
+                <p>Witness Ganga Aarti and ancient spiritual rituals.</p>
+                <p class="price">Starting at ₹13,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Haridwar Spiritual Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Dharamshala & McLeod Ganj">
+                <img src="https://images.unsplash.com/photo-1501769214405-4a6e0ab6ef91?auto=format&fit=crop&w=800&q=80" alt="Dharamshala" />
+                <h3>Dharamshala & McLeod Ganj</h3>
+                <p>Experience Tibetan culture and scenic mountain views.</p>
+                <p class="price">Starting at ₹22,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Dharamshala & McLeod Ganj Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Mussoorie Hill Station">
+                <img src="https://images.unsplash.com/photo-1509228627152-9d9d0f3f21b5?auto=format&fit=crop&w=800&q=80" alt="Mussoorie" />
+                <h3>Mussoorie Hill Station</h3>
+                <p>Enjoy the Queen of Hills with scenic nature walks.</p>
+                <p class="price">Starting at ₹17,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Mussoorie Hill Station Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Kasauli & Solan Tour">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Kasauli" />
+                <h3>Kasauli & Solan Tour</h3>
+                <p>Explore peaceful hill towns with colonial charm.</p>
+                <p class="price">Starting at ₹15,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Kasauli & Solan Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Chandigarh City Tour">
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b65e47?auto=format&fit=crop&w=800&q=80" alt="Chandigarh" />
+                <h3>Chandigarh City Tour</h3>
+                <p>Discover modern architecture and beautiful gardens.</p>
+                <p class="price">Starting at ₹13,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Chandigarh City Tour">Book Now</a>
+            </article>
+
+            <!-- South India (12) -->
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Kerala Backwaters Tour">
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=800&q=80" alt="Kerala Backwaters" />
+                <h3>Kerala Backwaters</h3>
+                <p>Relax on houseboats and discover lush landscapes and serene waters.</p>
+                <p class="price">Starting at ₹18,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Kerala Backwaters Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Goa Beaches Tour">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Goa Beach" />
+                <h3>Goa Beaches</h3>
+                <p>Sunbathe on golden beaches and enjoy lively nightlife in Goa.</p>
+                <p class="price">Starting at ₹16,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Goa Beaches Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Mysore Palace Tour">
+                <img src="https://images.unsplash.com/photo-1508098682727-208a7f9a173b?auto=format&fit=crop&w=800&q=80" alt="Mysore Palace" />
+                <h3>Mysore Palace</h3>
+                <p>Explore the grandeur and history of Mysore’s royal heritage.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Mysore Palace Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Hampi Ruins Tour">
+                <img src="https://images.unsplash.com/photo-1505839673365-e3971f8d9184?auto=format&fit=crop&w=800&q=80" alt="Hampi Ruins" />
+                <h3>Hampi Ruins</h3>
+                <p>Discover the ancient ruins and UNESCO World Heritage site.</p>
+                <p class="price">Starting at ₹17,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Hampi Ruins Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Pondicherry French Quarters">
+                <img src="https://images.unsplash.com/photo-1502764613149-7f1d229e230f?auto=format&fit=crop&w=800&q=80" alt="Pondicherry" />
+                <h3>Pondicherry French Quarters</h3>
+                <p>Stroll through charming colonial streets and beaches.</p>
+                <p class="price">Starting at ₹13,500</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Pondicherry French Quarters">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Coorg Coffee Plantations">
+                <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&q=80" alt="Coorg" />
+                <h3>Coorg Coffee Plantations</h3>
+                <p>Experience lush greenery and aromatic coffee estates.</p>
+                <p class="price">Starting at ₹15,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Coorg Coffee Plantations">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Madurai Meenakshi Temple">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80" alt="Madurai Meenakshi Temple" />
+                <h3>Madurai Meenakshi Temple</h3>
+                <p>Visit the stunning Dravidian architecture and temples.</p>
+                <p class="price">Starting at ₹12,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Madurai Meenakshi Temple Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Kodaikanal Hill Station">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Kodaikanal" />
+                <h3>Kodaikanal Hill Station</h3>
+                <p>Enjoy scenic lakes and cool hill station weather.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Kodaikanal Hill Station Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Chennai City Tour">
+                <img src="https://images.unsplash.com/photo-1526483360415-0c275c3a5ca0?auto=format&fit=crop&w=800&q=80" alt="Chennai" />
+                <h3>Chennai City Tour</h3>
+                <p>Discover temples, beaches and bustling city life.</p>
+                <p class="price">Starting at ₹13,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Chennai City Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Varkala Beach">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Varkala Beach" />
+                <h3>Varkala Beach</h3>
+                <p>Relax at this serene cliff-side beach in Kerala.</p>
+                <p class="price">Starting at ₹15,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Varkala Beach Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="south" tabindex="0" aria-label="Thanjavur Temple Tour">
+                <img src="https://images.unsplash.com/photo-1519817650390-64a93db51143?auto=format&fit=crop&w=800&q=80" alt="Thanjavur" />
+                <h3>Thanjavur Temple Tour</h3>
+                <p>Explore ancient temples and rich culture of Tamil Nadu.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Thanjavur Temple Tour">Book Now</a>
+            </article>
+
+            <!-- West India (12) -->
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Rajasthan Royal Tour">
+                <img src="https://images.unsplash.com/photo-1549887531-3f5c99f67a11?auto=format&fit=crop&w=800&q=80" alt="Rajasthan Palace" />
+                <h3>Rajasthan Royal Tour</h3>
+                <p>Explore majestic forts, palaces, and vibrant culture of Rajasthan.</p>
+                <p class="price">Starting at ₹22,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Rajasthan Royal Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Mumbai City Tour">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Mumbai" />
+                <h3>Mumbai City Tour</h3>
+                <p>Experience India’s financial capital and Bollywood hub.</p>
+                <p class="price">Starting at ₹18,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Mumbai City Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Goa Beaches">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Goa Beach" />
+                <h3>Goa Beaches</h3>
+                <p>Sunbathe on golden beaches and enjoy lively nightlife in Goa.</p>
+                <p class="price">Starting at ₹16,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Goa Beaches Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Udaipur Lake City">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Udaipur" />
+                <h3>Udaipur Lake City</h3>
+                <p>Discover palaces and lakes in the romantic city of Udaipur.</p>
+                <p class="price">Starting at ₹20,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Udaipur Lake City">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Ahmedabad Heritage Tour">
+                <img src="https://images.unsplash.com/photo-1535930749574-1399327ce78f?auto=format&fit=crop&w=800&q=80" alt="Ahmedabad" />
+                <h3>Ahmedabad Heritage Tour</h3>
+                <p>Explore the rich history and architecture of Gujarat’s largest city.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Ahmedabad Heritage Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Rann of Kutch Festival">
+                <img src="https://images.unsplash.com/photo-1527708676377-4e5a012aab37?auto=format&fit=crop&w=800&q=80" alt="Rann of Kutch" />
+                <h3>Rann of Kutch Festival</h3>
+                <p>Experience the white desert and vibrant cultural festival.</p>
+                <p class="price">Starting at ₹25,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Rann of Kutch Festival">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Mount Abu Hill Station">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Mount Abu" />
+                <h3>Mount Abu Hill Station</h3>
+                <p>Enjoy the only hill station in Rajasthan with lakes and temples.</p>
+                <p class="price">Starting at ₹16,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Mount Abu Hill Station">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Sasan Gir Wildlife Tour">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Sasan Gir" />
+                <h3>Sasan Gir Wildlife Tour</h3>
+                <p>See the Asiatic lions and wildlife sanctuary in Gujarat.</p>
+                <p class="price">Starting at ₹19,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Sasan Gir Wildlife Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="west" tabindex="0" aria-label="Lonavala & Khandala Hills">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Lonavala" />
+                <h3>Lonavala & Khandala Hills</h3>
+                <p>Weekend hill station getaway near Mumbai and Pune.</p>
+                <p class="price">Starting at ₹12,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Lonavala & Khandala Hills">Book Now</a>
+            </article>
+
+            <!-- East India (13) -->
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Varanasi Spiritual Tour">
+                <img src="https://images.unsplash.com/photo-1549887530-55a81ed8e10d?auto=format&fit=crop&w=800&q=80" alt="Varanasi Ghats" />
+                <h3>Varanasi Spiritual</h3>
+                <p>Witness the ancient spiritual rituals on the banks of the Ganges.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Varanasi Spiritual Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Darjeeling Tea Gardens">
+                <img src="https://images.unsplash.com/photo-1526483360415-0c275c3a5ca0?auto=format&fit=crop&w=800&q=80" alt="Darjeeling" />
+                <h3>Darjeeling Tea Gardens</h3>
+                <p>Explore tea plantations and Himalayan views.</p>
+                <p class="price">Starting at ₹18,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Darjeeling Tea Gardens">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Sundarbans Mangrove Tour">
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=800&q=80" alt="Sundarbans" />
+                <h3>Sundarbans Mangrove Tour</h3>
+                <p>Explore the unique ecosystem of the mangrove forests.</p>
+                <p class="price">Starting at ₹22,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Sundarbans Mangrove Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Puri Beach & Jagannath Temple">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Puri" />
+                <h3>Puri Beach & Jagannath Temple</h3>
+                <p>Visit the holy temple and relax at Puri’s beaches.</p>
+                <p class="price">Starting at ₹16,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Puri Beach & Jagannath Temple">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Kolkata City Tour">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Kolkata" />
+                <h3>Kolkata City Tour</h3>
+                <p>Discover colonial architecture, museums and vibrant culture.</p>
+                <p class="price">Starting at ₹13,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Kolkata City Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Shillong & Meghalaya Hills">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Shillong" />
+                <h3>Shillong & Meghalaya Hills</h3>
+                <p>Enjoy waterfalls, caves, and scenic hills in Northeast India.</p>
+                <p class="price">Starting at ₹17,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Shillong & Meghalaya Hills">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Bhubaneswar Heritage Tour">
+                <img src="https://images.unsplash.com/photo-1519817650390-64a93db51143?auto=format&fit=crop&w=800&q=80" alt="Bhubaneswar" />
+                <h3>Bhubaneswar Heritage Tour</h3>
+                <p>Explore ancient temples and architecture in Odisha’s capital.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Bhubaneswar Heritage Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Majuli Island">
+                <img src="https://images.unsplash.com/photo-1527708676377-4e5a012aab37?auto=format&fit=crop&w=800&q=80" alt="Majuli Island" />
+                <h3>Majuli Island</h3>
+                <p>Visit the world’s largest river island in Assam.</p>
+                <p class="price">Starting at ₹16,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Majuli Island Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Kaziranga National Park">
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=800&q=80" alt="Kaziranga National Park" />
+                <h3>Kaziranga National Park</h3>
+                <p>Home to the Indian one-horned rhinoceros and diverse wildlife.</p>
+                <p class="price">Starting at ₹20,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Kaziranga National Park Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="east" tabindex="0" aria-label="Konark Sun Temple">
+                <img src="https://images.unsplash.com/photo-1519817650390-64a93db51143?auto=format&fit=crop&w=800&q=80" alt="Konark Sun Temple" />
+                <h3>Konark Sun Temple</h3>
+                <p>Marvel at the UNESCO World Heritage site temple in Odisha.</p>
+                <p class="price">Starting at ₹15,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Konark Sun Temple Tour">Book Now</a>
+            </article>
+
+            <!-- North India (10) -->
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Delhi City Tour">
+                <img src="https://images.unsplash.com/photo-1549887530-55a81ed8e10d?auto=format&fit=crop&w=800&q=80" alt="Delhi" />
+                <h3>Delhi City Tour</h3>
+                <p>Visit historic monuments and vibrant markets of India’s capital.</p>
+                <p class="price">Starting at ₹12,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Delhi City Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Agra Taj Mahal Tour">
+                <img src="https://images.unsplash.com/photo-1527708676377-4e5a012aab37?auto=format&fit=crop&w=800&q=80" alt="Taj Mahal" />
+                <h3>Agra Taj Mahal Tour</h3>
+                <p>Witness the beauty of the iconic Taj Mahal.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Agra Taj Mahal Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Jaipur Pink City Tour">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80" alt="Jaipur" />
+                <h3>Jaipur Pink City Tour</h3>
+                <p>Explore forts, palaces and markets in Rajasthan’s capital.</p>
+                <p class="price">Starting at ₹16,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Jaipur Pink City Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Leh Ladakh Adventure">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Leh Ladakh" />
+                <h3>Leh Ladakh Adventure</h3>
+                <p>Explore breathtaking mountains and monasteries.</p>
+                <p class="price">Starting at ₹25,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Leh Ladakh Adventure">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Rishikesh Yoga & Adventure">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Rishikesh" />
+                <h3>Rishikesh Yoga & Adventure</h3>
+                <p>Enjoy yoga, rafting and spiritual experiences by the Ganges.</p>
+                <p class="price">Starting at ₹18,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Rishikesh Yoga & Adventure">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Amritsar Golden Temple">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80" alt="Golden Temple" />
+                <h3>Amritsar Golden Temple</h3>
+                <p>Visit the sacred Golden Temple and experience Sikh culture.</p>
+                <p class="price">Starting at ₹14,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Amritsar Golden Temple">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Shimla Hill Station">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Shimla" />
+                <h3>Shimla Hill Station</h3>
+                <p>Enjoy the cool climate and colonial charm of Shimla.</p>
+                <p class="price">Starting at ₹15,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Shimla Hill Station">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Haridwar Spiritual Tour">
+                <img src="https://images.unsplash.com/photo-1526483360415-0c275c3a5ca0?auto=format&fit=crop&w=800&q=80" alt="Haridwar" />
+                <h3>Haridwar Spiritual Tour</h3>
+                <p>Experience the sacred rituals and ghats by the Ganges.</p>
+                <p class="price">Starting at ₹13,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Haridwar Spiritual Tour">Book Now</a>
+            </article>
+            <article class="tour-card" data-region="north" tabindex="0" aria-label="Mussoorie Hill Station">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80" alt="Mussoorie" />
+                <h3>Mussoorie Hill Station</h3>
+                <p>Enjoy the scenic beauty and cool climate of Mussoorie.</p>
+                <p class="price">Starting at ₹15,000</p>
+                <a href="booking.html" class="btn-secondary" aria-label="Book Mussoorie Hill Station">Book Now</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>&copy; 2025 Wanderlust India. All rights reserved.</footer>
+
+    <!-- ===== Back to Top Button ===== -->
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ===== JS: Filter + Search + Back-to-top ===== -->
+    <script>
+        const filterSelect = document.getElementById('dest-filter');
+        const searchInput = document.getElementById('dest-search');
+        const destCards = document.querySelectorAll('.tour-card');
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Filter function
+        filterSelect.addEventListener('change', () => filterDestinations());
+        searchInput.addEventListener('input', () => filterDestinations());
+
+        function filterDestinations() {
+            const region = filterSelect.value;
+            const query = searchInput.value.toLowerCase();
+
+            destCards.forEach(card => {
+                const matchRegion = region === 'all' || card.dataset.region === region;
+                const matchSearch = card.dataset.title.includes(query);
+                card.style.display = (matchRegion && matchSearch) ? 'flex' : 'none';
+            });
+        }
+
+        // Back to Top
+        window.addEventListener('scroll', () => {
+            backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        }));
+    </script>
+</body>
+
+</html>
